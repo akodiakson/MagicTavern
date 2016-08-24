@@ -1,4 +1,4 @@
-package com.akodiakson.magictavern.ui;
+package com.akodiakson.magictavern.util;
 
 import android.databinding.BindingAdapter;
 import android.util.Log;
@@ -22,7 +22,6 @@ public class SummaryBindingUtil {
 
     @BindingAdapter("dateAndLengthOfEpisodeBinding")
     public static void dateAndLengthOfEpisodeBinding(TextView textView, Item episode){
-        StringBuilder formattedString = new StringBuilder();
         String formattedPubDate = getFormattedPubDate(episode);
         String formattedDuration = getFormattedDuration(episode);
         textView.setText(formattedPubDate + " - " + formattedDuration);

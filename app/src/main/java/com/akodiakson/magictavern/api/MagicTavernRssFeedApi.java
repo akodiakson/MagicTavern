@@ -37,6 +37,7 @@ public class MagicTavernRssFeedApi implements EpisodesRepository {
     public void loadEpisodes(final LoadEpisodesCallback callback) {
         if(cachedEpisodes != null){
             callback.onEpisodesLoaded(cachedEpisodes);
+            return;
         }
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(ENDPOINT_URL)

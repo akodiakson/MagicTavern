@@ -1,6 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_delivery_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_nav_height"
+    android:background="@color/white"
+    android:elevation="@dimen/bottom_nav_elevation"
+    android:orientation="vertical">
 
-</LinearLayout>
+    <android.support.constraint.Guideline
+        android:id="@+id/leftGuideline"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/bottom_nav_height"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33333334" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/rightGuideline"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/bottom_nav_height"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6666667" />
+
+
+    <include
+        layout="@layout/item_nav_option"
+        android:id="@+id/first_nav_option"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_nav_height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/leftGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        layout="@layout/item_nav_option"
+        android:id="@+id/second_nav_option"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_nav_height"
+        app:layout_constraintLeft_toRightOf="@id/leftGuideline"
+        app:layout_constraintRight_toLeftOf="@+id/rightGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        layout="@layout/item_nav_option"
+        android:id="@+id/third_nav_option"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_nav_height"
+        app:layout_constraintLeft_toRightOf="@id/rightGuideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

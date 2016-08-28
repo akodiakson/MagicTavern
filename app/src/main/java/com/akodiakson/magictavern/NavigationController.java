@@ -26,4 +26,5 @@ public class NavigationController {
     public void setActiveTab(TopLevelNavTab activeTab) {
         this.activeTab = activeTab;
     }
+
 }

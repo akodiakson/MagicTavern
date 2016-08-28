@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Active">
+
+    </style>
+    <style name="Inactive">
+
+    </style>
 </resources>

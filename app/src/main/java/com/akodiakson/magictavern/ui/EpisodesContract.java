@@ -11,7 +11,6 @@ public interface EpisodesContract {
     }
 
     interface UserActionsListener{
-        //TODO Rename this listener
         void loadEpisodes();
     }
 }

@@ -6,4 +6,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tab_title_episodes">Episodes</string>
     <string name="tab_title_earth_stuff">Earth Stuff</string>
+    <string name="tab_title_foon_stuff">Foon Stuff</string>
+
 </resources>

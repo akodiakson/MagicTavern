@@ -2,12 +2,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="activeTab"
-            type="com.akodiakson.magictavern.TopLevelNavTab"/>
-    </data>
-
     <android.support.constraint.ConstraintLayout
         android:id="@+id/container_delivery_item"
         android:layout_width="match_parent"

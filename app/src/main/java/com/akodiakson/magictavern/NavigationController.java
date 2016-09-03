@@ -14,8 +14,8 @@ public class NavigationController {
     static {
         navTabs = new ArrayList<>();
         navTabs.add(new NavTab(TopLevelNavTab.EPISODES, R.string.tab_title_episodes, R.drawable.ic_mic_black_24dp));
-        navTabs.add(new NavTab(TopLevelNavTab.EARTH_STUFF, R.string.tab_title_earth_stuff, R.drawable.ic_mic_black_24dp));
-        navTabs.add(new NavTab(TopLevelNavTab.FOON_STUFF, R.string.tab_title_foon_stuff, R.drawable.ic_mic_black_24dp));
+        navTabs.add(new NavTab(TopLevelNavTab.EARTH_STUFF, R.string.tab_title_earth_stuff, R.drawable.ic_terrain_black_24dp));
+        navTabs.add(new NavTab(TopLevelNavTab.FOON_STUFF, R.string.tab_title_foon_stuff, R.drawable.ic_whatshot_black_24dp));
     }
 
     private NavigationController() {
@@ -36,6 +36,13 @@ public class NavigationController {
     }
 
     public void setActiveTab(NavTab activeTab) {
+        for (NavTab navTab : NavigationController.getNavTabs()) {
+            if(navTab == activeTab){
+                navTab.setActive(true);
+            } else {
+                navTab.setActive(false);
+            }
+        }
         this.activeTab = activeTab;
     }
 

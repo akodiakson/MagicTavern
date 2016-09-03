@@ -16,13 +16,6 @@ public class NavigationPresenter implements NavigationContract.Presenter {
 
     @Override
     public void selectNavigationOption(NavTab topLevelNavTab) {
-        for (NavTab navTab : NavigationController.getNavTabs()) {
-            if(navTab == topLevelNavTab){
-                navTab.setActive(true);
-            } else {
-                navTab.setActive(false);
-            }
-        }
         navigationController.setActiveTab(topLevelNavTab);
         view.onNavigationOptionSelected(topLevelNavTab);
     }
